@@ -1,4 +1,4 @@
-package tests.basketLocators;
+package basketLocators;
 
 import org.openqa.selenium.By;
 

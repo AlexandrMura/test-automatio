@@ -1,15 +1,17 @@
-package tests.driver;
+package driver;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 
+import java.util.concurrent.TimeUnit;
+
 public class Driver {
     private final static Logger LOG = LogManager.getRootLogger();
     private static WebDriver driver;
 
-    private Driver() {
+    public Driver() {
     }
 
     public static WebDriver getDriver() {
@@ -22,13 +24,18 @@ public class Driver {
         ChromeOptions chromeOptions = new ChromeOptions();
         chromeOptions.addArguments("start-maximized");
         LOG.info("Driver initialization");
-        //driver = new EventFiringWebDriver(new ChromeDriver(chromeOptions)).register(new WebDriverListener());
+        driver.manage().window().maximize();
+        driver.manage().timeouts().implicitlyWait(8, TimeUnit.SECONDS);
         return driver;
     }
     public static void closeDriver() {
-        if(driver != null) {
-        driver.quit();
-        driver = null;}}}
+        if (driver != null) {
+            driver.quit();
+            driver = null;
+            LOG.info("close driver");
+        }
+    }
+}
 
 
 
