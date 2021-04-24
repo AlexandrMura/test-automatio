@@ -15,8 +15,8 @@ public class LoginTest extends BaseTest {
     @Description("user authentication")
     public void AuthPage(){
         LoginPage.clickOpen();
-        LoginPage.insertUserName("al.murashkin@mail.ru");
-        LoginPage.insertUserPassword("mur08061994");
+        LoginPage.insertUserName("");
+        LoginPage.insertUserPassword("");
         LoginPage.clickSignInButton();
         Assert.assertTrue(LoginPage.comparingTitleLoginPage("My account"));
 
