@@ -1,1 +1,0 @@
-{"uuid":"684cb89c-5830-4bca-be6a-b7d901ab3ab7","name":"latest","children":["e05741f5-7c2e-452e-a6e5-520ed29f3f87"],"befores":[{"name":"initDriver","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1618937946875,"stop":1618938061498}],"afters":[],"links":[],"start":1618937946655,"stop":1618938430889}
